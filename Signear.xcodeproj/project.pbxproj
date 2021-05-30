@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		090E71935DA83B665964017E /* Pods_Signear_SignearUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322FDE4D75E48343D72285DA /* Pods_Signear_SignearUITests.framework */; };
+		2866E0672663C5F50046C8CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866E0662663C5F50046C8CE /* AppDelegate.swift */; };
+		2866E0692663C5F50046C8CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866E0682663C5F50046C8CE /* SceneDelegate.swift */; };
+		2866E06B2663C5F50046C8CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866E06A2663C5F50046C8CE /* ViewController.swift */; };
+		2866E06E2663C5F50046C8CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2866E06C2663C5F50046C8CE /* Main.storyboard */; };
+		2866E0702663C5F60046C8CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2866E06F2663C5F60046C8CE /* Assets.xcassets */; };
+		2866E0732663C5F60046C8CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2866E0712663C5F60046C8CE /* LaunchScreen.storyboard */; };
+		2866E07E2663C5F60046C8CE /* SignearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866E07D2663C5F60046C8CE /* SignearTests.swift */; };
+		2866E0892663C5F60046C8CE /* SignearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866E0882663C5F60046C8CE /* SignearUITests.swift */; };
+		58557A6D50B029B499441DD4 /* Pods_Signear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED924E841B346AA0191459C /* Pods_Signear.framework */; };
+		73320F3250904FC33C4CD755 /* Pods_SignearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA209E6578691A9C8F4A3EEC /* Pods_SignearTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2866E07A2663C5F60046C8CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2866E05B2663C5F50046C8CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2866E0622663C5F50046C8CE;
+			remoteInfo = Signear;
+		};
+		2866E0852663C5F60046C8CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2866E05B2663C5F50046C8CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2866E0622663C5F50046C8CE;
+			remoteInfo = Signear;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FA64A63E9C872D00FBBD650 /* Pods-Signear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Signear.release.xcconfig"; path = "Target Support Files/Pods-Signear/Pods-Signear.release.xcconfig"; sourceTree = "<group>"; };
+		1ED924E841B346AA0191459C /* Pods_Signear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Signear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2866E0632663C5F50046C8CE /* Signear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signear.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2866E0662663C5F50046C8CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2866E0682663C5F50046C8CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2866E06A2663C5F50046C8CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2866E06D2663C5F50046C8CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2866E06F2663C5F60046C8CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2866E0722663C5F60046C8CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2866E0742663C5F60046C8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2866E0792663C5F60046C8CE /* SignearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2866E07D2663C5F60046C8CE /* SignearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignearTests.swift; sourceTree = "<group>"; };
+		2866E07F2663C5F60046C8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2866E0842663C5F60046C8CE /* SignearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2866E0882663C5F60046C8CE /* SignearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignearUITests.swift; sourceTree = "<group>"; };
+		2866E08A2663C5F60046C8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		322FDE4D75E48343D72285DA /* Pods_Signear_SignearUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Signear_SignearUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4998209E022E503641515BB8 /* Pods-SignearTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignearTests.release.xcconfig"; path = "Target Support Files/Pods-SignearTests/Pods-SignearTests.release.xcconfig"; sourceTree = "<group>"; };
+		60F5CDE40C1905CF937D797A /* Pods-SignearTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignearTests.debug.xcconfig"; path = "Target Support Files/Pods-SignearTests/Pods-SignearTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B56A49426F6566E23554C953 /* Pods-Signear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Signear.debug.xcconfig"; path = "Target Support Files/Pods-Signear/Pods-Signear.debug.xcconfig"; sourceTree = "<group>"; };
+		CE9CD38C316D2142D671B87B /* Pods-Signear-SignearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Signear-SignearUITests.debug.xcconfig"; path = "Target Support Files/Pods-Signear-SignearUITests/Pods-Signear-SignearUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA209E6578691A9C8F4A3EEC /* Pods_SignearTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignearTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1490B54126BF3F116042BD4 /* Pods-Signear-SignearUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Signear-SignearUITests.release.xcconfig"; path = "Target Support Files/Pods-Signear-SignearUITests/Pods-Signear-SignearUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2866E0602663C5F50046C8CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58557A6D50B029B499441DD4 /* Pods_Signear.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2866E0762663C5F60046C8CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73320F3250904FC33C4CD755 /* Pods_SignearTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2866E0812663C5F60046C8CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090E71935DA83B665964017E /* Pods_Signear_SignearUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		281552F22663D9E300B85F74 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2866E06F2663C5F60046C8CE /* Assets.xcassets */,
+				2866E0742663C5F60046C8CE /* Info.plist */,
+				2866E0712663C5F60046C8CE /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2866E05A2663C5F50046C8CE = {
+			isa = PBXGroup;
+			children = (
+				2866E0652663C5F50046C8CE /* Signear */,
+				2866E07C2663C5F60046C8CE /* SignearTests */,
+				2866E0872663C5F60046C8CE /* SignearUITests */,
+				2866E0642663C5F50046C8CE /* Products */,
+				F517AE551791B3E65EB38E46 /* Pods */,
+				D83A34BCA1394FF754BA3A95 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2866E0642663C5F50046C8CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2866E0632663C5F50046C8CE /* Signear.app */,
+				2866E0792663C5F60046C8CE /* SignearTests.xctest */,
+				2866E0842663C5F60046C8CE /* SignearUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2866E0652663C5F50046C8CE /* Signear */ = {
+			isa = PBXGroup;
+			children = (
+				281552F22663D9E300B85F74 /* SupportingFiles */,
+				2866E0662663C5F50046C8CE /* AppDelegate.swift */,
+				2866E0682663C5F50046C8CE /* SceneDelegate.swift */,
+				2866E06A2663C5F50046C8CE /* ViewController.swift */,
+				2866E06C2663C5F50046C8CE /* Main.storyboard */,
+			);
+			path = Signear;
+			sourceTree = "<group>";
+		};
+		2866E07C2663C5F60046C8CE /* SignearTests */ = {
+			isa = PBXGroup;
+			children = (
+				2866E07D2663C5F60046C8CE /* SignearTests.swift */,
+				2866E07F2663C5F60046C8CE /* Info.plist */,
+			);
+			path = SignearTests;
+			sourceTree = "<group>";
+		};
+		2866E0872663C5F60046C8CE /* SignearUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2866E0882663C5F60046C8CE /* SignearUITests.swift */,
+				2866E08A2663C5F60046C8CE /* Info.plist */,
+			);
+			path = SignearUITests;
+			sourceTree = "<group>";
+		};
+		D83A34BCA1394FF754BA3A95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ED924E841B346AA0191459C /* Pods_Signear.framework */,
+				322FDE4D75E48343D72285DA /* Pods_Signear_SignearUITests.framework */,
+				DA209E6578691A9C8F4A3EEC /* Pods_SignearTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F517AE551791B3E65EB38E46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B56A49426F6566E23554C953 /* Pods-Signear.debug.xcconfig */,
+				0FA64A63E9C872D00FBBD650 /* Pods-Signear.release.xcconfig */,
+				CE9CD38C316D2142D671B87B /* Pods-Signear-SignearUITests.debug.xcconfig */,
+				F1490B54126BF3F116042BD4 /* Pods-Signear-SignearUITests.release.xcconfig */,
+				60F5CDE40C1905CF937D797A /* Pods-SignearTests.debug.xcconfig */,
+				4998209E022E503641515BB8 /* Pods-SignearTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2866E0622663C5F50046C8CE /* Signear */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2866E08D2663C5F60046C8CE /* Build configuration list for PBXNativeTarget "Signear" */;
+			buildPhases = (
+				96F8AF939594D53BE5321B53 /* [CP] Check Pods Manifest.lock */,
+				2866E05F2663C5F50046C8CE /* Sources */,
+				2866E0602663C5F50046C8CE /* Frameworks */,
+				2866E0612663C5F50046C8CE /* Resources */,
+				DCC43B09CD589EB4DD18EA46 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Signear;
+			productName = Signear;
+			productReference = 2866E0632663C5F50046C8CE /* Signear.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2866E0782663C5F60046C8CE /* SignearTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2866E0902663C5F60046C8CE /* Build configuration list for PBXNativeTarget "SignearTests" */;
+			buildPhases = (
+				65723F8BB71A4C155EABE315 /* [CP] Check Pods Manifest.lock */,
+				2866E0752663C5F60046C8CE /* Sources */,
+				2866E0762663C5F60046C8CE /* Frameworks */,
+				2866E0772663C5F60046C8CE /* Resources */,
+				21925BD38F30FA3E90A0F548 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2866E07B2663C5F60046C8CE /* PBXTargetDependency */,
+			);
+			name = SignearTests;
+			productName = SignearTests;
+			productReference = 2866E0792663C5F60046C8CE /* SignearTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2866E0832663C5F60046C8CE /* SignearUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2866E0932663C5F60046C8CE /* Build configuration list for PBXNativeTarget "SignearUITests" */;
+			buildPhases = (
+				9CC0236C59605DFAA6ED4CEE /* [CP] Check Pods Manifest.lock */,
+				2866E0802663C5F60046C8CE /* Sources */,
+				2866E0812663C5F60046C8CE /* Frameworks */,
+				2866E0822663C5F60046C8CE /* Resources */,
+				F127EE43994E608426295A09 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2866E0862663C5F60046C8CE /* PBXTargetDependency */,
+			);
+			name = SignearUITests;
+			productName = SignearUITests;
+			productReference = 2866E0842663C5F60046C8CE /* SignearUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2866E05B2663C5F50046C8CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					2866E0622663C5F50046C8CE = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					2866E0782663C5F60046C8CE = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 2866E0622663C5F50046C8CE;
+					};
+					2866E0832663C5F60046C8CE = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 2866E0622663C5F50046C8CE;
+					};
+				};
+			};
+			buildConfigurationList = 2866E05E2663C5F50046C8CE /* Build configuration list for PBXProject "Signear" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2866E05A2663C5F50046C8CE;
+			productRefGroup = 2866E0642663C5F50046C8CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2866E0622663C5F50046C8CE /* Signear */,
+				2866E0782663C5F60046C8CE /* SignearTests */,
+				2866E0832663C5F60046C8CE /* SignearUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2866E0612663C5F50046C8CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2866E0732663C5F60046C8CE /* LaunchScreen.storyboard in Resources */,
+				2866E0702663C5F60046C8CE /* Assets.xcassets in Resources */,
+				2866E06E2663C5F50046C8CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2866E0772663C5F60046C8CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2866E0822663C5F60046C8CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21925BD38F30FA3E90A0F548 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SignearTests/Pods-SignearTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SignearTests/Pods-SignearTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SignearTests/Pods-SignearTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65723F8BB71A4C155EABE315 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SignearTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96F8AF939594D53BE5321B53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Signear-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CC0236C59605DFAA6ED4CEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Signear-SignearUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCC43B09CD589EB4DD18EA46 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Signear/Pods-Signear-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Signear/Pods-Signear-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Signear/Pods-Signear-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F127EE43994E608426295A09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Signear-SignearUITests/Pods-Signear-SignearUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Signear-SignearUITests/Pods-Signear-SignearUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Signear-SignearUITests/Pods-Signear-SignearUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2866E05F2663C5F50046C8CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2866E06B2663C5F50046C8CE /* ViewController.swift in Sources */,
+				2866E0672663C5F50046C8CE /* AppDelegate.swift in Sources */,
+				2866E0692663C5F50046C8CE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2866E0752663C5F60046C8CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2866E07E2663C5F60046C8CE /* SignearTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2866E0802663C5F60046C8CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2866E0892663C5F60046C8CE /* SignearUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2866E07B2663C5F60046C8CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2866E0622663C5F50046C8CE /* Signear */;
+			targetProxy = 2866E07A2663C5F60046C8CE /* PBXContainerItemProxy */;
+		};
+		2866E0862663C5F60046C8CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2866E0622663C5F50046C8CE /* Signear */;
+			targetProxy = 2866E0852663C5F60046C8CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2866E06C2663C5F50046C8CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2866E06D2663C5F50046C8CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2866E0712663C5F60046C8CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2866E0722663C5F60046C8CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2866E08B2663C5F60046C8CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2866E08C2663C5F60046C8CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2866E08E2663C5F60046C8CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B56A49426F6566E23554C953 /* Pods-Signear.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84CPTZ438W;
+				INFOPLIST_FILE = Signear/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sullivan.signear.admin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2866E08F2663C5F60046C8CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FA64A63E9C872D00FBBD650 /* Pods-Signear.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84CPTZ438W;
+				INFOPLIST_FILE = Signear/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sullivan.signear.admin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2866E0912663C5F60046C8CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60F5CDE40C1905CF937D797A /* Pods-SignearTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84CPTZ438W;
+				INFOPLIST_FILE = SignearTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaycesub.stamp.SignearTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Signear.app/Signear";
+			};
+			name = Debug;
+		};
+		2866E0922663C5F60046C8CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4998209E022E503641515BB8 /* Pods-SignearTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84CPTZ438W;
+				INFOPLIST_FILE = SignearTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaycesub.stamp.SignearTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Signear.app/Signear";
+			};
+			name = Release;
+		};
+		2866E0942663C5F60046C8CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9CD38C316D2142D671B87B /* Pods-Signear-SignearUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84CPTZ438W;
+				INFOPLIST_FILE = SignearUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaycesub.stamp.SignearUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Signear;
+			};
+			name = Debug;
+		};
+		2866E0952663C5F60046C8CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1490B54126BF3F116042BD4 /* Pods-Signear-SignearUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84CPTZ438W;
+				INFOPLIST_FILE = SignearUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaycesub.stamp.SignearUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Signear;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2866E05E2663C5F50046C8CE /* Build configuration list for PBXProject "Signear" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2866E08B2663C5F60046C8CE /* Debug */,
+				2866E08C2663C5F60046C8CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2866E08D2663C5F60046C8CE /* Build configuration list for PBXNativeTarget "Signear" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2866E08E2663C5F60046C8CE /* Debug */,
+				2866E08F2663C5F60046C8CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2866E0902663C5F60046C8CE /* Build configuration list for PBXNativeTarget "SignearTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2866E0912663C5F60046C8CE /* Debug */,
+				2866E0922663C5F60046C8CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2866E0932663C5F60046C8CE /* Build configuration list for PBXNativeTarget "SignearUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2866E0942663C5F60046C8CE /* Debug */,
+				2866E0952663C5F60046C8CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2866E05B2663C5F50046C8CE /* Project object */;
+}
