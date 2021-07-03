@@ -314,7 +314,7 @@
                                             <constraint firstAttribute="height" constant="38" id="IBy-Zr-yHM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CR-RQ-65e">
                                         <rect key="frame" x="22" y="221.5" width="370" height="57"/>
@@ -422,7 +422,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-Bo-xJg">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="소속 지역을 선택하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-Bo-xJg">
                                         <rect key="frame" x="68" y="223.5" width="319" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="C9g-XT-iZf"/>
@@ -485,10 +485,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="areaTextField" destination="CFu-Bo-xJg" id="s97-E3-d7j"/>
                         <outlet property="backImageView" destination="dRD-Sz-6eK" id="LDb-0d-q6t"/>
                         <outlet property="emailTextField" destination="Ixa-BF-xaT" id="o4m-eL-F5A"/>
                         <outlet property="passwordTextField" destination="aHM-Lx-JtT" id="rW4-k9-VM3"/>
-                        <outlet property="phoneTextField" destination="CFu-Bo-xJg" id="s97-E3-d7j"/>
                         <outlet property="signUpButton" destination="w6K-6D-PGa" id="vJb-Vc-PEr"/>
                     </connections>
                 </viewController>
@@ -561,9 +561,6 @@
                             <constraint firstItem="ylM-Tc-U1Y" firstAttribute="centerY" secondItem="clu-hQ-DWi" secondAttribute="centerY" id="lNK-7C-t5f"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="signUpButton" destination="p3m-Nn-dqe" id="tRq-GS-tq5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZcI-eR-tcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

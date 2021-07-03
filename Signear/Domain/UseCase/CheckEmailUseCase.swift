@@ -8,12 +8,20 @@
 import Foundation
 import RxSwift
 
-protocol CheckEmailUseCaseType {
-    func checkEmail(_ email: String) -> Observable<Bool>
+protocol EmailCheckUseCaseType {
+    func checkEmail(with email: String) -> Observable<Result<Bool, APIError>>
 }
 
-class CheckEmailUseCase: CheckEmailUseCaseType {
-    func checkEmail(_ email: String) -> Observable<Bool> {
-        return .just(true)
+class EmailCheckUseCase: EmailCheckUseCaseType {
+    func checkEmail(with email: String) -> Observable<Result<Bool, APIError>> {
+        return SignearAPI.shared.checkEmail(email)
+            .map { result in
+                switch result {
+                case .success(let isExsit):
+                    return .success(isExsit.isNext)
+                case .failure(let error):
+                    return .failure(error)
+                }
+            }
     }
 }

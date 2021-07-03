@@ -36,7 +36,6 @@ class EmailCheckViewController: UIViewController {
         
         #if DEBUG
         emailTextField.text = "test@ab.cd"
-        viewModel?.inputs.setEmail(emailTextField.text)
         #endif
     }
     
@@ -58,36 +57,14 @@ extension EmailCheckViewController {
     private func configuareUI() {
         configuareBackgroundLayer()
         
-        let backImageViewTapGesture = UITapGestureRecognizer()
-        backImageView.addGestureRecognizer(backImageViewTapGesture)
-        backImageViewTapGesture.rx.event
-            .asDriver()
-            .drive(onNext: { [weak self] _ in
-                self?.navigationController?.popViewController(animated: false)
-            }).disposed(by: disposeBag)
-        
-        emailTextField.rx.text
-            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-            .asDriver(onErrorJustReturn: nil)
-            .drive(onNext: { [weak self] email in
-                self?.viewModel?.inputs.setEmail(email)
-            }).disposed(by: disposeBag)
-        
-    
-        nextButton.setBackgroundColor(.init(r: 34, g: 34, b: 34), for: .normal)
-        nextButton.setBackgroundColor(.init(r: 182, g: 182, b: 182), for: .disabled)
         nextButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
-                self?.viewModel?.inputs.checkEmail()
-            }).disposed(by: disposeBag)
-        
-        let findAccountLabelTapGesture = UITapGestureRecognizer()
-        findAccountLabel.addGestureRecognizer(findAccountLabelTapGesture)
-        findAccountLabelTapGesture.rx.event
-            .asDriver()
-            .drive(onNext: { [weak self] _ in
-                self?.showFindAccountView()
+                guard let self = self,
+                      let email = self.emailTextField.text else {
+                    return
+                }
+                self.viewModel?.inputs.checkEmail(email)
             }).disposed(by: disposeBag)
     }
     
@@ -100,26 +77,25 @@ extension EmailCheckViewController {
     }
     
     private func bindUI() {
-        viewModel?.outputs.isValidEmailType
-            .drive(nextButton.rx.isEnabled)
-            .disposed(by: disposeBag)
-        
         viewModel?.outputs.checkEmailResult
-            .filter { $0 != nil }
-            .map { $0! }
-            .drive(onNext: { [weak self] email in
-                self?.showLoginView(email: email)
+            .drive(onNext: { [weak self] existAccount in
+                if existAccount {
+                    self?.showLoginViewController()
+                } else {
+                    self?.showSignUpViewController()
+                }
             }).disposed(by: disposeBag)
     }
     
-    private func showFindAccountView() {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "FindAccountViewController") as? FindAccountViewController else { return }
-        navigationController?.pushViewController(vc, animated: false)
+    private func showLoginViewController() {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+        vc.email = emailTextField.text
+        navigationController?.pushViewController(vc, animated: true)
     }
     
-    private func showLoginView(email: String) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
-        vc.email = email
-        navigationController?.pushViewController(vc, animated: false)
+    private func showSignUpViewController() {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else { return }
+        vc.email = emailTextField.text
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

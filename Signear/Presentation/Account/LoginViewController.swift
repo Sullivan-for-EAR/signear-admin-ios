@@ -35,12 +35,12 @@ class LoginViewController: UIViewController {
     // MARK : Life Cycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         configureUI()
         viewModel = LoginViewModel()
         
         #if DEBUG
-        passwordTextField.text = "bfbfb"
-        viewModel?.inputs.password.accept(passwordTextField.text)
+        passwordTextField.text = "123123"
         #endif
     }
     
@@ -60,26 +60,17 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     private func configureUI() {
-        configuareBackgroundLayer()
         emailTextField.text = email
-        
-        let backImageViewTapGesture = UITapGestureRecognizer()
-        backImageView.addGestureRecognizer(backImageViewTapGesture)
-        backImageViewTapGesture.rx.event
+        configuareBackgroundLayer()
+        nextButton.rx.tap
             .asDriver()
-            .drive(onNext: { [weak self] _ in
-                self?.navigationController?.popViewController(animated: false)
-            }).disposed(by: disposeBag)
-        
-        nextButton.setBackgroundColor(.init(r: 34, g: 34, b: 34), for: .normal)
-        nextButton.setBackgroundColor(.init(r: 182, g: 182, b: 182), for: .disabled)
-        
-        let findAccountLabelTapGesture = UITapGestureRecognizer()
-        findAccountLabel.addGestureRecognizer(findAccountLabelTapGesture)
-        findAccountLabelTapGesture.rx.event
-            .asDriver()
-            .drive(onNext: { [weak self] _ in
-                self?.showFindAccountView()
+            .drive(onNext: { [weak self] in
+                guard let self = self,
+                      let email = self.emailTextField.text,
+                      let password = self.passwordTextField.text else {
+                    return
+                }
+                self.viewModel?.inputs.login(email: email, password: password)
             }).disposed(by: disposeBag)
     }
     
@@ -92,31 +83,10 @@ extension LoginViewController {
     }
     
     private func bindUI() {
-        guard let viewModel = viewModel else { return }
-        emailTextField.rx.text
-            .distinctUntilChanged()
-            .bind(to: viewModel.inputs.email)
-            .disposed(by: disposeBag)
-        
-        passwordTextField.rx.text
-            .distinctUntilChanged()
-            .bind(to: viewModel.inputs.password)
-            .disposed(by: disposeBag)
-        
-        nextButton.rx.tap
-            .bind(to: viewModel.inputs.login)
-            .disposed(by: disposeBag)
-        
-        viewModel.outputs.isValidAccountType
-            .distinctUntilChanged()
-            .drive(nextButton.rx.isEnabled)
-            .disposed(by: disposeBag)
-        
-        viewModel.outputs.loginResult
-            .drive(onNext: { [weak self] isSucceed in
-                if isSucceed {
-                    self?.showReservationListView()
-                }
+        viewModel?.outputs.loginResult
+            .filter { $0 }
+            .drive(onNext: { [weak self] result in
+                self?.showReservationListView()
             }).disposed(by: disposeBag)
     }
     

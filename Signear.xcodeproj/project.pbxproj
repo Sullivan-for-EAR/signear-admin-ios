@@ -39,6 +39,11 @@
 		280BE95B266BFFB70071183E /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE95A266BFFB70071183E /* DashboardCollectionViewCell.swift */; };
 		280BE95D266CE0FE0071183E /* FetchDashboardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE95C266CE0FE0071183E /* FetchDashboardUseCase.swift */; };
 		280BE960266CECC10071183E /* DashboardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE95F266CECC10071183E /* DashboardInfoViewController.swift */; };
+		2830F2022690602500307713 /* SignUpDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F2012690602500307713 /* SignUpDTO.swift */; };
+		2830F204269060A400307713 /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F203269060A400307713 /* LoginDTO.swift */; };
+		2830F2062690612100307713 /* ResetPasswordDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F2052690612100307713 /* ResetPasswordDTO.swift */; };
+		2830F2082690617300307713 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F2072690617300307713 /* Encodable+Extension.swift */; };
+		2830F20A2690680C00307713 /* FetchAreaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F2092690680C00307713 /* FetchAreaUseCase.swift */; };
 		284CFB1826651BBB00DB9879 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CFB0926651BBB00DB9879 /* LoginViewModel.swift */; };
 		284CFB1926651BBB00DB9879 /* FindAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CFB0A26651BBB00DB9879 /* FindAccountViewModel.swift */; };
 		284CFB1A26651BBB00DB9879 /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CFB0B26651BBB00DB9879 /* SendEmailViewController.swift */; };
@@ -125,6 +130,11 @@
 		280BE95A266BFFB70071183E /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		280BE95C266CE0FE0071183E /* FetchDashboardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDashboardUseCase.swift; sourceTree = "<group>"; };
 		280BE95F266CECC10071183E /* DashboardInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInfoViewController.swift; sourceTree = "<group>"; };
+		2830F2012690602500307713 /* SignUpDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDTO.swift; sourceTree = "<group>"; };
+		2830F203269060A400307713 /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
+		2830F2052690612100307713 /* ResetPasswordDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordDTO.swift; sourceTree = "<group>"; };
+		2830F2072690617300307713 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		2830F2092690680C00307713 /* FetchAreaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAreaUseCase.swift; sourceTree = "<group>"; };
 		284CFB0926651BBB00DB9879 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		284CFB0A26651BBB00DB9879 /* FindAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindAccountViewModel.swift; sourceTree = "<group>"; };
 		284CFB0B26651BBB00DB9879 /* SendEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmailViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +315,7 @@
 				280BE8F726675D6F0071183E /* UIButton+Extension.swift */,
 				284CFB2B26651C0100DB9879 /* UIView+Extension.swift */,
 				280BE8FB26675F0B0071183E /* String+Extension.swift */,
+				2830F2072690617300307713 /* Encodable+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -333,6 +344,7 @@
 				280BE9252668B0C90071183E /* FetchReservationsUseCaseMock.swift */,
 				280BE9272668B0C90071183E /* LostEmailUseCase.swift */,
 				280BE92A2668B0C90071183E /* SignUpUseCase.swift */,
+				2830F2092690680C00307713 /* FetchAreaUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -406,6 +418,9 @@
 			isa = PBXGroup;
 			children = (
 				287CB915266E5E7600B51F0D /* CheckEmailDTO.swift */,
+				2830F2012690602500307713 /* SignUpDTO.swift */,
+				2830F203269060A400307713 /* LoginDTO.swift */,
+				2830F2052690612100307713 /* ResetPasswordDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -683,6 +698,7 @@
 				280BE9492668B1570071183E /* MyPageViewModel.swift in Sources */,
 				280BE9372668B0C90071183E /* FetchReservationsUseCase.swift in Sources */,
 				280BE9552668C87E0071183E /* ReservationDashboardViewModel.swift in Sources */,
+				2830F2062690612100307713 /* ResetPasswordDTO.swift in Sources */,
 				287CB913266E5D7200B51F0D /* SignearAPI.swift in Sources */,
 				284CFB2C26651C0100DB9879 /* UIColor+Extension.swift in Sources */,
 				284CFB1C26651BBB00DB9879 /* SendEmailViewModel.swift in Sources */,
@@ -694,10 +710,12 @@
 				284CFB1826651BBB00DB9879 /* LoginViewModel.swift in Sources */,
 				284CFB2626651BBB00DB9879 /* FindAccountViewController.swift in Sources */,
 				284CFB1B26651BBB00DB9879 /* HelloViewController.swift in Sources */,
+				2830F20A2690680C00307713 /* FetchAreaUseCase.swift in Sources */,
 				280BE9212668B08B0071183E /* ReservationHistoryModel.swift in Sources */,
 				280BE9242668B08B0071183E /* ProfileModel.swift in Sources */,
 				280BE95D266CE0FE0071183E /* FetchDashboardUseCase.swift in Sources */,
 				280BE9222668B08B0071183E /* ReservationInfoModel.swift in Sources */,
+				2830F204269060A400307713 /* LoginDTO.swift in Sources */,
 				280BE9422668B1570071183E /* ProfileTableViewCell.swift in Sources */,
 				280BE9512668B8560071183E /* ReservationDashboardViewController.swift in Sources */,
 				280BE9342668B0C90071183E /* SignUpUseCase.swift in Sources */,
@@ -708,6 +726,8 @@
 				287CB910266E574F00B51F0D /* DashboardInfoViewModel.swift in Sources */,
 				280BE92F2668B0C90071183E /* FetchReservationsUseCaseMock.swift in Sources */,
 				2866E06B2663C5F50046C8CE /* ViewController.swift in Sources */,
+				2830F2082690617300307713 /* Encodable+Extension.swift in Sources */,
+				2830F2022690602500307713 /* SignUpDTO.swift in Sources */,
 				284CFB2026651BBB00DB9879 /* SignUpViewController.swift in Sources */,
 				284CFB2D26651C0100DB9879 /* UIView+Extension.swift in Sources */,
 				280BE8F826675D6F0071183E /* UIButton+Extension.swift in Sources */,

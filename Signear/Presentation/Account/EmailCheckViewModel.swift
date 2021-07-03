@@ -10,13 +10,11 @@ import RxCocoa
 import RxSwift
 
 protocol EmailCheckViewModelInputs {
-    func setEmail(_ email: String?)
-    func checkEmail()
+    func checkEmail(_ email: String)
 }
 
 protocol EmailCheckViewModelOutputs {
-    var isValidEmailType: Driver<Bool> { get }
-    var checkEmailResult: Driver<String?> { get }
+    var checkEmailResult: Driver<Bool> { get }
 }
 
 protocol EmailCheckViewModelType {
@@ -29,17 +27,15 @@ class EmailCheckViewModel: EmailCheckViewModelType {
     // MARK: - Properties - Private
     
     private let disposeBag = DisposeBag()
-    private let useCase: CheckEmailUseCaseType
-    private var email: String? = nil
-    private var _isValidEmailType: BehaviorRelay<Bool> = .init(value: false)
-    private var _checkEmailResult: PublishRelay<String?> = .init()
+    private let useCase: EmailCheckUseCaseType
+    private let _checkEmailResult: PublishRelay<Bool> = .init()
     
-    init(useCase: CheckEmailUseCaseType) {
+    init(useCase: EmailCheckUseCaseType) {
         self.useCase = useCase
     }
     
     convenience init() {
-        self.init(useCase: CheckEmailUseCase())
+        self.init(useCase: EmailCheckUseCase())
     }
 }
 
@@ -49,27 +45,23 @@ extension EmailCheckViewModel: EmailCheckViewModelInputs {
 
     var inputs: EmailCheckViewModelInputs { return self }
     
-    func setEmail(_ email: String?) {
-        self.email = email
-        _isValidEmailType.accept(email?.isValidEmail() ?? false)
-    }
-    
-    func checkEmail() {
-        guard let email = email else { return }
-        useCase.checkEmail(email)
+    func checkEmail(_ email: String) {
+        useCase.checkEmail(with: email)
             .subscribe(onNext: { [weak self] result in
-                self?._checkEmailResult.accept(email)
-            })
-            .disposed(by: disposeBag)
+                switch result {
+                case .success(let isExist):
+                    self?._checkEmailResult.accept(isExist)
+                case .failure(_):
+                    // error 처리
+                    return
+                }
+            }).disposed(by: disposeBag)
     }
 }
 
 // MARK: - EmailCheckViewModelOutputs
 
 extension EmailCheckViewModel: EmailCheckViewModelOutputs {
-    
     var outputs: EmailCheckViewModelOutputs { return self }
-    
-    var isValidEmailType: Driver<Bool> { _isValidEmailType.asDriver(onErrorJustReturn: false) }
-    var checkEmailResult: Driver<String?> { _checkEmailResult.asDriver(onErrorJustReturn: nil) }
+    var checkEmailResult: Driver<Bool> { _checkEmailResult.asDriver(onErrorJustReturn: false) }
 }
