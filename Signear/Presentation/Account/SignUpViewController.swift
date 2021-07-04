@@ -41,6 +41,16 @@ class SignUpViewController: UIViewController {
         viewModel?.inputs.fetchArea()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     // MARK: - Actions
     
     @objc private func didAreaPickerViewDoneButtonPressed() {
@@ -53,10 +63,22 @@ class SignUpViewController: UIViewController {
 extension SignUpViewController {
     
     private func configureUI() {
+        configureBackgroundColor()
+        configureBackImageView()
         configureAreaPickerView()
-        emailTextField.text = email
-        initBackgroundColor()
         
+        emailTextField.text = email
+        
+        Observable.of(emailTextField.rx.text.orEmpty,
+                      passwordTextField.rx.text.orEmpty,
+                      areaTextField.rx.text.orEmpty).merge()
+            .asDriver(onErrorJustReturn: "")
+            .drive(onNext: { [weak self] text in
+                self?.updateUI()
+            }).disposed(by: disposeBag)
+    
+        signUpButton.setBackgroundColor(.init(rgb: 0x222222), for: .normal)
+        signUpButton.setBackgroundColor(.init(rgb: 0xB6B6B6), for: .disabled)
         signUpButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
@@ -70,6 +92,24 @@ extension SignUpViewController {
             }).disposed(by: disposeBag)
     }
     
+    private func configureBackgroundColor() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = [UIColor.init(r: 10, g: 132, b: 255).cgColor,
+                                UIColor.init(r: 0, g: 178, b: 255).cgColor]
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    private func configureBackImageView() {
+        let backGenture = UITapGestureRecognizer(target: self, action: nil)
+        backGenture.rx.event
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: false)
+            }).disposed(by: disposeBag)
+        backImageView.addGestureRecognizer(backGenture)
+    }
+    
     private func configureAreaPickerView() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -77,6 +117,7 @@ extension SignUpViewController {
         let doneButon = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(didAreaPickerViewDoneButtonPressed))
         toolbar.setItems([doneButon], animated: true)
         
+        areaTextField.delegate = self
         areaTextField.inputView = areaPickerView
         areaTextField.inputAccessoryView = toolbar
         areaPickerView.rx.modelSelected(String.self)
@@ -89,12 +130,12 @@ extension SignUpViewController {
             }).disposed(by: disposeBag)
     }
     
-    private func initBackgroundColor() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [UIColor.init(r: 10, g: 132, b: 255).cgColor,
-                                UIColor.init(r: 0, g: 178, b: 255).cgColor]
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    private func updateUI() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.signUpButton.isEnabled = self.emailTextField.text?.isValidEmail() == true && self.passwordTextField.text?.isNotEmpty == true &&
+                self.areaTextField.text?.isNotEmpty == true
+        }
     }
     
     private func bindUI() {
@@ -113,5 +154,15 @@ extension SignUpViewController {
     private func showHelloViewController() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "HelloViewController") as? HelloViewController else { return }
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    
+    // TODO : 고쳐야하는 코드
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.text == nil || textField.text?.isEmpty == true {
+            areaTextField.text = "강남구"
+        }
     }
 }

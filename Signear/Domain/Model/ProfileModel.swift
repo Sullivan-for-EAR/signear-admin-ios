@@ -9,15 +9,15 @@ import Foundation
 
 struct ProfileModel: Equatable {
     let name: String
-    let phoneNumber: String
+    let address: String
     
     init() {
-        self.init(name: "", phoneNumber: "")
+        self.init(name: "", address: "")
     }
     
     init(name: String,
-         phoneNumber: String) {
+         address: String) {
         self.name = name
-        self.phoneNumber = phoneNumber
+        self.address = address
     }
 }

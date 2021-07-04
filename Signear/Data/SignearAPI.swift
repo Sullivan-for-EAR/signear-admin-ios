@@ -22,11 +22,17 @@ class SignearAPI {
     // MARK: - Properties - Internal
     
     enum Constants {
-//        static let baseURL = "http://3.35.204.9:80"
-        static let baseURL = "http://192.168.0.112:8088"
+        static let baseURL = "http://3.35.204.9:80"
         static let checkEmailURL = "/sign/check"
         static let signUpURL = "/user/sign/create"
         static let loginURL = "/sign/login"
+        static let fetchDashboardURL = "/reservation/sign/list"
+        static let fetchReservationInfoURL = "/reservation/customer/"
+        static let fetchReservationListURL = "/reservation/customer/list"
+        static let rejectReservationURL = "/reservation/sign/reject/{reservationId}"
+        static let acceptReservationURL = "/reservation/sign/confirm/{reservationId}"
+        static let fetchReservationHistoryURL = "/management/sign/list"
+        static let getUserInfoURL = "/user/sign/"
     }
     
     // MARK: Properties - Private

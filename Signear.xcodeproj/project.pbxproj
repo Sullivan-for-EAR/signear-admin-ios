@@ -11,21 +11,16 @@
 		280BE8FC26675F0B0071183E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE8FB26675F0B0071183E /* String+Extension.swift */; };
 		280BE9002667D5330071183E /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE8FF2667D5330071183E /* LoginUseCase.swift */; };
 		280BE9122668B0190071183E /* Reservation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280BE9062668B0190071183E /* Reservation.storyboard */; };
-		280BE9202668B08B0071183E /* MakeReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE91B2668B08B0071183E /* MakeReservationModel.swift */; };
 		280BE9212668B08B0071183E /* ReservationHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE91C2668B08B0071183E /* ReservationHistoryModel.swift */; };
 		280BE9222668B08B0071183E /* ReservationInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE91D2668B08B0071183E /* ReservationInfoModel.swift */; };
 		280BE9232668B08B0071183E /* ReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE91E2668B08B0071183E /* ReservationModel.swift */; };
 		280BE9242668B08B0071183E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE91F2668B08B0071183E /* ProfileModel.swift */; };
-		280BE92F2668B0C90071183E /* FetchReservationsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE9252668B0C90071183E /* FetchReservationsUseCaseMock.swift */; };
 		280BE9302668B0C90071183E /* FetchReservationHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE9262668B0C90071183E /* FetchReservationHistoryUseCase.swift */; };
 		280BE9312668B0C90071183E /* LostEmailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE9272668B0C90071183E /* LostEmailUseCase.swift */; };
 		280BE9342668B0C90071183E /* SignUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE92A2668B0C90071183E /* SignUpUseCase.swift */; };
 		280BE9352668B0C90071183E /* FetchReservationInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE92B2668B0C90071183E /* FetchReservationInfoUseCase.swift */; };
 		280BE9362668B0C90071183E /* FetchProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE92C2668B0C90071183E /* FetchProfileUseCase.swift */; };
 		280BE9372668B0C90071183E /* FetchReservationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE92D2668B0C90071183E /* FetchReservationsUseCase.swift */; };
-		280BE9382668B0C90071183E /* CancelReservationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE92E2668B0C90071183E /* CancelReservationUseCase.swift */; };
-		280BE9422668B1570071183E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE93A2668B1570071183E /* ProfileTableViewCell.swift */; };
-		280BE9432668B1570071183E /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280BE93B2668B1570071183E /* ProfileTableViewCell.xib */; };
 		280BE9442668B1570071183E /* MyPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280BE93C2668B1570071183E /* MyPageTableViewCell.xib */; };
 		280BE9462668B1570071183E /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280BE93E2668B1570071183E /* MyPageTableViewCell.swift */; };
 		280BE9472668B1570071183E /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280BE93F2668B1570071183E /* MyPage.storyboard */; };
@@ -44,6 +39,18 @@
 		2830F2062690612100307713 /* ResetPasswordDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F2052690612100307713 /* ResetPasswordDTO.swift */; };
 		2830F2082690617300307713 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F2072690617300307713 /* Encodable+Extension.swift */; };
 		2830F20A2690680C00307713 /* FetchAreaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F2092690680C00307713 /* FetchAreaUseCase.swift */; };
+		2830F20C2690773D00307713 /* SignearAPI+Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F20B2690773D00307713 /* SignearAPI+Reservation.swift */; };
+		2830F20E2690776900307713 /* FetchReservationInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F20D2690776900307713 /* FetchReservationInfoDTO.swift */; };
+		2830F2102690783000307713 /* FetchDashboardDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F20F2690783000307713 /* FetchDashboardDTO.swift */; };
+		2830F212269079CF00307713 /* FetchReservationsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F211269079CF00307713 /* FetchReservationsDTO.swift */; };
+		2830F214269098EA00307713 /* RejectReservationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F213269098EA00307713 /* RejectReservationDTO.swift */; };
+		2830F21626909A4C00307713 /* RejectReservationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F21526909A4C00307713 /* RejectReservationUseCase.swift */; };
+		2830F21826909CBB00307713 /* AcceptReservationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F21726909CBB00307713 /* AcceptReservationUseCase.swift */; };
+		2830F21A26909CE900307713 /* AcceptReservationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F21926909CE900307713 /* AcceptReservationDTO.swift */; };
+		2830F21C26909F0100307713 /* EmergencyDashboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2830F21B26909F0100307713 /* EmergencyDashboardCollectionViewCell.xib */; };
+		2830F21E2690A1BC00307713 /* EmergencyDashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F21D2690A1BB00307713 /* EmergencyDashboardCollectionViewCell.swift */; };
+		2830F2232690B67A00307713 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F2222690B67A00307713 /* ReservationTableViewCell.swift */; };
+		2830F2252690B87600307713 /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2830F2242690B87600307713 /* ReservationTableViewCell.xib */; };
 		284CFB1826651BBB00DB9879 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CFB0926651BBB00DB9879 /* LoginViewModel.swift */; };
 		284CFB1926651BBB00DB9879 /* FindAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CFB0A26651BBB00DB9879 /* FindAccountViewModel.swift */; };
 		284CFB1A26651BBB00DB9879 /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CFB0B26651BBB00DB9879 /* SendEmailViewController.swift */; };
@@ -69,6 +76,19 @@
 		2866E0732663C5F60046C8CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2866E0712663C5F60046C8CE /* LaunchScreen.storyboard */; };
 		2866E07E2663C5F60046C8CE /* SignearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866E07D2663C5F60046C8CE /* SignearTests.swift */; };
 		2866E0892663C5F60046C8CE /* SignearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866E0882663C5F60046C8CE /* SignearUITests.swift */; };
+		2867345A269153FC00878CEA /* ReservationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28673459269153FC00878CEA /* ReservationListViewModel.swift */; };
+		2867345C26915A3D00878CEA /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2867345B26915A3D00878CEA /* Date+Extension.swift */; };
+		2867345E2691634D00878CEA /* ReservationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2867345D2691634D00878CEA /* ReservationInfoViewController.swift */; };
+		286734602691673100878CEA /* ReservationInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2867345F2691673100878CEA /* ReservationInfoViewModel.swift */; };
+		2867346226916F1E00878CEA /* ReservationHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2867346126916F1E00878CEA /* ReservationHistoryViewController.swift */; };
+		2867346426916F4600878CEA /* ReservationHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2867346326916F4600878CEA /* ReservationHistoryViewModel.swift */; };
+		286734662691716900878CEA /* ReservationHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286734652691716900878CEA /* ReservationHistoryTableViewCell.xib */; };
+		286734682691716E00878CEA /* ReservationHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286734672691716E00878CEA /* ReservationHistoryTableViewCell.swift */; };
+		2867346C2691951E00878CEA /* UserInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2867346B2691951E00878CEA /* UserInfoDTO.swift */; };
+		2867346E2691959A00878CEA /* SignearAPI+MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2867346D2691959A00878CEA /* SignearAPI+MyPage.swift */; };
+		286734702691C1AB00878CEA /* ReservationDashboardBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2867346F2691C1AB00878CEA /* ReservationDashboardBackgroundView.xib */; };
+		286734722691C37400878CEA /* ReservationListBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286734712691C37400878CEA /* ReservationListBackgroundView.xib */; };
+		286734742691C57300878CEA /* FetchReservationHistoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286734732691C57300878CEA /* FetchReservationHistoryDTO.swift */; };
 		287CB910266E574F00B51F0D /* DashboardInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CB90F266E574F00B51F0D /* DashboardInfoViewModel.swift */; };
 		287CB913266E5D7200B51F0D /* SignearAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CB912266E5D7200B51F0D /* SignearAPI.swift */; };
 		287CB916266E5E7600B51F0D /* CheckEmailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CB915266E5E7600B51F0D /* CheckEmailDTO.swift */; };
@@ -102,21 +122,16 @@
 		280BE8FB26675F0B0071183E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		280BE8FF2667D5330071183E /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		280BE9062668B0190071183E /* Reservation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reservation.storyboard; sourceTree = "<group>"; };
-		280BE91B2668B08B0071183E /* MakeReservationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationModel.swift; sourceTree = "<group>"; };
 		280BE91C2668B08B0071183E /* ReservationHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationHistoryModel.swift; sourceTree = "<group>"; };
 		280BE91D2668B08B0071183E /* ReservationInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationInfoModel.swift; sourceTree = "<group>"; };
 		280BE91E2668B08B0071183E /* ReservationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationModel.swift; sourceTree = "<group>"; };
 		280BE91F2668B08B0071183E /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
-		280BE9252668B0C90071183E /* FetchReservationsUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchReservationsUseCaseMock.swift; sourceTree = "<group>"; };
 		280BE9262668B0C90071183E /* FetchReservationHistoryUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchReservationHistoryUseCase.swift; sourceTree = "<group>"; };
 		280BE9272668B0C90071183E /* LostEmailUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostEmailUseCase.swift; sourceTree = "<group>"; };
 		280BE92A2668B0C90071183E /* SignUpUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpUseCase.swift; sourceTree = "<group>"; };
 		280BE92B2668B0C90071183E /* FetchReservationInfoUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchReservationInfoUseCase.swift; sourceTree = "<group>"; };
 		280BE92C2668B0C90071183E /* FetchProfileUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchProfileUseCase.swift; sourceTree = "<group>"; };
 		280BE92D2668B0C90071183E /* FetchReservationsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchReservationsUseCase.swift; sourceTree = "<group>"; };
-		280BE92E2668B0C90071183E /* CancelReservationUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelReservationUseCase.swift; sourceTree = "<group>"; };
-		280BE93A2668B1570071183E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
-		280BE93B2668B1570071183E /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		280BE93C2668B1570071183E /* MyPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPageTableViewCell.xib; sourceTree = "<group>"; };
 		280BE93E2668B1570071183E /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
 		280BE93F2668B1570071183E /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
@@ -135,6 +150,18 @@
 		2830F2052690612100307713 /* ResetPasswordDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordDTO.swift; sourceTree = "<group>"; };
 		2830F2072690617300307713 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		2830F2092690680C00307713 /* FetchAreaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAreaUseCase.swift; sourceTree = "<group>"; };
+		2830F20B2690773D00307713 /* SignearAPI+Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignearAPI+Reservation.swift"; sourceTree = "<group>"; };
+		2830F20D2690776900307713 /* FetchReservationInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchReservationInfoDTO.swift; sourceTree = "<group>"; };
+		2830F20F2690783000307713 /* FetchDashboardDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDashboardDTO.swift; sourceTree = "<group>"; };
+		2830F211269079CF00307713 /* FetchReservationsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchReservationsDTO.swift; sourceTree = "<group>"; };
+		2830F213269098EA00307713 /* RejectReservationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectReservationDTO.swift; sourceTree = "<group>"; };
+		2830F21526909A4C00307713 /* RejectReservationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectReservationUseCase.swift; sourceTree = "<group>"; };
+		2830F21726909CBB00307713 /* AcceptReservationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptReservationUseCase.swift; sourceTree = "<group>"; };
+		2830F21926909CE900307713 /* AcceptReservationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptReservationDTO.swift; sourceTree = "<group>"; };
+		2830F21B26909F0100307713 /* EmergencyDashboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmergencyDashboardCollectionViewCell.xib; sourceTree = "<group>"; };
+		2830F21D2690A1BB00307713 /* EmergencyDashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyDashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		2830F2222690B67A00307713 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
+		2830F2242690B87600307713 /* ReservationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationTableViewCell.xib; sourceTree = "<group>"; };
 		284CFB0926651BBB00DB9879 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		284CFB0A26651BBB00DB9879 /* FindAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindAccountViewModel.swift; sourceTree = "<group>"; };
 		284CFB0B26651BBB00DB9879 /* SendEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmailViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +193,19 @@
 		2866E0842663C5F60046C8CE /* SignearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2866E0882663C5F60046C8CE /* SignearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignearUITests.swift; sourceTree = "<group>"; };
 		2866E08A2663C5F60046C8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28673459269153FC00878CEA /* ReservationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationListViewModel.swift; sourceTree = "<group>"; };
+		2867345B26915A3D00878CEA /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		2867345D2691634D00878CEA /* ReservationInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationInfoViewController.swift; sourceTree = "<group>"; };
+		2867345F2691673100878CEA /* ReservationInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationInfoViewModel.swift; sourceTree = "<group>"; };
+		2867346126916F1E00878CEA /* ReservationHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationHistoryViewController.swift; sourceTree = "<group>"; };
+		2867346326916F4600878CEA /* ReservationHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationHistoryViewModel.swift; sourceTree = "<group>"; };
+		286734652691716900878CEA /* ReservationHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		286734672691716E00878CEA /* ReservationHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		2867346B2691951E00878CEA /* UserInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoDTO.swift; sourceTree = "<group>"; };
+		2867346D2691959A00878CEA /* SignearAPI+MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignearAPI+MyPage.swift"; sourceTree = "<group>"; };
+		2867346F2691C1AB00878CEA /* ReservationDashboardBackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationDashboardBackgroundView.xib; sourceTree = "<group>"; };
+		286734712691C37400878CEA /* ReservationListBackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationListBackgroundView.xib; sourceTree = "<group>"; };
+		286734732691C57300878CEA /* FetchReservationHistoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchReservationHistoryDTO.swift; sourceTree = "<group>"; };
 		287CB90F266E574F00B51F0D /* DashboardInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInfoViewModel.swift; sourceTree = "<group>"; };
 		287CB912266E5D7200B51F0D /* SignearAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignearAPI.swift; sourceTree = "<group>"; };
 		287CB915266E5E7600B51F0D /* CheckEmailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailDTO.swift; sourceTree = "<group>"; };
@@ -214,7 +254,7 @@
 			children = (
 				280BE9062668B0190071183E /* Reservation.storyboard */,
 				280BE95E266CECAC0071183E /* Dashboard */,
-				280BE94E2668B7760071183E /* ReservationListViewController.swift */,
+				2830F21F2690B29800307713 /* Reservation */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
@@ -222,7 +262,6 @@
 		280BE91A2668B08B0071183E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				280BE91B2668B08B0071183E /* MakeReservationModel.swift */,
 				280BE91C2668B08B0071183E /* ReservationHistoryModel.swift */,
 				280BE91D2668B08B0071183E /* ReservationInfoModel.swift */,
 				280BE91E2668B08B0071183E /* ReservationModel.swift */,
@@ -234,8 +273,6 @@
 		280BE9392668B1570071183E /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				280BE93A2668B1570071183E /* ProfileTableViewCell.swift */,
-				280BE93B2668B1570071183E /* ProfileTableViewCell.xib */,
 				280BE93C2668B1570071183E /* MyPageTableViewCell.xib */,
 				280BE93E2668B1570071183E /* MyPageTableViewCell.swift */,
 				280BE93F2668B1570071183E /* MyPage.storyboard */,
@@ -250,6 +287,9 @@
 			children = (
 				280BE9502668B8560071183E /* ReservationDashboardViewController.swift */,
 				280BE9542668C87E0071183E /* ReservationDashboardViewModel.swift */,
+				2867346F2691C1AB00878CEA /* ReservationDashboardBackgroundView.xib */,
+				2830F21B26909F0100307713 /* EmergencyDashboardCollectionViewCell.xib */,
+				2830F21D2690A1BB00307713 /* EmergencyDashboardCollectionViewCell.swift */,
 				280BE958266BFFAC0071183E /* DashboardCollectionViewCell.xib */,
 				280BE95A266BFFB70071183E /* DashboardCollectionViewCell.swift */,
 				280BE95F266CECC10071183E /* DashboardInfoViewController.swift */,
@@ -266,6 +306,24 @@
 				2866E0712663C5F60046C8CE /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2830F21F2690B29800307713 /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				280BE94E2668B7760071183E /* ReservationListViewController.swift */,
+				28673459269153FC00878CEA /* ReservationListViewModel.swift */,
+				286734712691C37400878CEA /* ReservationListBackgroundView.xib */,
+				2830F2242690B87600307713 /* ReservationTableViewCell.xib */,
+				2830F2222690B67A00307713 /* ReservationTableViewCell.swift */,
+				2867345D2691634D00878CEA /* ReservationInfoViewController.swift */,
+				2867345F2691673100878CEA /* ReservationInfoViewModel.swift */,
+				2867346126916F1E00878CEA /* ReservationHistoryViewController.swift */,
+				2867346326916F4600878CEA /* ReservationHistoryViewModel.swift */,
+				286734652691716900878CEA /* ReservationHistoryTableViewCell.xib */,
+				286734672691716E00878CEA /* ReservationHistoryTableViewCell.swift */,
+			);
+			path = Reservation;
 			sourceTree = "<group>";
 		};
 		284CFB0726651B3E00DB9879 /* Presentation */ = {
@@ -316,6 +374,7 @@
 				284CFB2B26651C0100DB9879 /* UIView+Extension.swift */,
 				280BE8FB26675F0B0071183E /* String+Extension.swift */,
 				2830F2072690617300307713 /* Encodable+Extension.swift */,
+				2867345B26915A3D00878CEA /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -335,13 +394,13 @@
 			children = (
 				284CFB3026652BB700DB9879 /* CheckEmailUseCase.swift */,
 				280BE8FF2667D5330071183E /* LoginUseCase.swift */,
-				280BE92E2668B0C90071183E /* CancelReservationUseCase.swift */,
 				280BE92C2668B0C90071183E /* FetchProfileUseCase.swift */,
 				280BE9262668B0C90071183E /* FetchReservationHistoryUseCase.swift */,
 				280BE92B2668B0C90071183E /* FetchReservationInfoUseCase.swift */,
 				280BE92D2668B0C90071183E /* FetchReservationsUseCase.swift */,
 				280BE95C266CE0FE0071183E /* FetchDashboardUseCase.swift */,
-				280BE9252668B0C90071183E /* FetchReservationsUseCaseMock.swift */,
+				2830F21526909A4C00307713 /* RejectReservationUseCase.swift */,
+				2830F21726909CBB00307713 /* AcceptReservationUseCase.swift */,
 				280BE9272668B0C90071183E /* LostEmailUseCase.swift */,
 				280BE92A2668B0C90071183E /* SignUpUseCase.swift */,
 				2830F2092690680C00307713 /* FetchAreaUseCase.swift */,
@@ -410,6 +469,8 @@
 			children = (
 				287CB914266E5E6C00B51F0D /* DTO */,
 				287CB912266E5D7200B51F0D /* SignearAPI.swift */,
+				2830F20B2690773D00307713 /* SignearAPI+Reservation.swift */,
+				2867346D2691959A00878CEA /* SignearAPI+MyPage.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -420,7 +481,14 @@
 				287CB915266E5E7600B51F0D /* CheckEmailDTO.swift */,
 				2830F2012690602500307713 /* SignUpDTO.swift */,
 				2830F203269060A400307713 /* LoginDTO.swift */,
+				2830F20D2690776900307713 /* FetchReservationInfoDTO.swift */,
+				2830F211269079CF00307713 /* FetchReservationsDTO.swift */,
+				2830F20F2690783000307713 /* FetchDashboardDTO.swift */,
+				2830F213269098EA00307713 /* RejectReservationDTO.swift */,
+				2830F21926909CE900307713 /* AcceptReservationDTO.swift */,
 				2830F2052690612100307713 /* ResetPasswordDTO.swift */,
+				286734732691C57300878CEA /* FetchReservationHistoryDTO.swift */,
+				2867346B2691951E00878CEA /* UserInfoDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -565,13 +633,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286734702691C1AB00878CEA /* ReservationDashboardBackgroundView.xib in Resources */,
 				2866E0732663C5F60046C8CE /* LaunchScreen.storyboard in Resources */,
 				2866E0702663C5F60046C8CE /* Assets.xcassets in Resources */,
 				280BE959266BFFAC0071183E /* DashboardCollectionViewCell.xib in Resources */,
-				280BE9432668B1570071183E /* ProfileTableViewCell.xib in Resources */,
+				286734662691716900878CEA /* ReservationHistoryTableViewCell.xib in Resources */,
 				280BE9442668B1570071183E /* MyPageTableViewCell.xib in Resources */,
 				280BE9472668B1570071183E /* MyPage.storyboard in Resources */,
 				280BE9122668B0190071183E /* Reservation.storyboard in Resources */,
+				2830F2252690B87600307713 /* ReservationTableViewCell.xib in Resources */,
+				286734722691C37400878CEA /* ReservationListBackgroundView.xib in Resources */,
+				2830F21C26909F0100307713 /* EmergencyDashboardCollectionViewCell.xib in Resources */,
 				284CFB2526651BBB00DB9879 /* Account.storyboard in Resources */,
 				2866E06E2663C5F50046C8CE /* Main.storyboard in Resources */,
 			);
@@ -684,10 +756,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2867346226916F1E00878CEA /* ReservationHistoryViewController.swift in Sources */,
+				2830F21626909A4C00307713 /* RejectReservationUseCase.swift in Sources */,
 				284CFB1926651BBB00DB9879 /* FindAccountViewModel.swift in Sources */,
 				280BE95B266BFFB70071183E /* DashboardCollectionViewCell.swift in Sources */,
 				280BE8FC26675F0B0071183E /* String+Extension.swift in Sources */,
 				280BE94D2668B6970071183E /* MainTabBarController.swift in Sources */,
+				286734602691673100878CEA /* ReservationInfoViewModel.swift in Sources */,
 				280BE9312668B0C90071183E /* LostEmailUseCase.swift in Sources */,
 				284CFB2126651BBB00DB9879 /* InitialViewController.swift in Sources */,
 				280BE9352668B0C90071183E /* FetchReservationInfoUseCase.swift in Sources */,
@@ -695,15 +770,18 @@
 				280BE9482668B1570071183E /* MyPageViewController.swift in Sources */,
 				284CFB1F26651BBB00DB9879 /* EmailCheckViewModel.swift in Sources */,
 				280BE94F2668B7760071183E /* ReservationListViewController.swift in Sources */,
+				2830F214269098EA00307713 /* RejectReservationDTO.swift in Sources */,
 				280BE9492668B1570071183E /* MyPageViewModel.swift in Sources */,
 				280BE9372668B0C90071183E /* FetchReservationsUseCase.swift in Sources */,
+				2867345C26915A3D00878CEA /* Date+Extension.swift in Sources */,
+				2830F20C2690773D00307713 /* SignearAPI+Reservation.swift in Sources */,
 				280BE9552668C87E0071183E /* ReservationDashboardViewModel.swift in Sources */,
 				2830F2062690612100307713 /* ResetPasswordDTO.swift in Sources */,
 				287CB913266E5D7200B51F0D /* SignearAPI.swift in Sources */,
 				284CFB2C26651C0100DB9879 /* UIColor+Extension.swift in Sources */,
 				284CFB1C26651BBB00DB9879 /* SendEmailViewModel.swift in Sources */,
+				286734742691C57300878CEA /* FetchReservationHistoryDTO.swift in Sources */,
 				287CB919266E5F6200B51F0D /* CheckEmailRepository.swift in Sources */,
-				280BE9202668B08B0071183E /* MakeReservationModel.swift in Sources */,
 				287CB916266E5E7600B51F0D /* CheckEmailDTO.swift in Sources */,
 				280BE9362668B0C90071183E /* FetchProfileUseCase.swift in Sources */,
 				280BE9302668B0C90071183E /* FetchReservationHistoryUseCase.swift in Sources */,
@@ -714,27 +792,37 @@
 				280BE9212668B08B0071183E /* ReservationHistoryModel.swift in Sources */,
 				280BE9242668B08B0071183E /* ProfileModel.swift in Sources */,
 				280BE95D266CE0FE0071183E /* FetchDashboardUseCase.swift in Sources */,
+				2867345E2691634D00878CEA /* ReservationInfoViewController.swift in Sources */,
 				280BE9222668B08B0071183E /* ReservationInfoModel.swift in Sources */,
 				2830F204269060A400307713 /* LoginDTO.swift in Sources */,
-				280BE9422668B1570071183E /* ProfileTableViewCell.swift in Sources */,
+				2867346426916F4600878CEA /* ReservationHistoryViewModel.swift in Sources */,
+				2830F2232690B67A00307713 /* ReservationTableViewCell.swift in Sources */,
+				2830F212269079CF00307713 /* FetchReservationsDTO.swift in Sources */,
 				280BE9512668B8560071183E /* ReservationDashboardViewController.swift in Sources */,
 				280BE9342668B0C90071183E /* SignUpUseCase.swift in Sources */,
+				2830F2102690783000307713 /* FetchDashboardDTO.swift in Sources */,
 				280BE960266CECC10071183E /* DashboardInfoViewController.swift in Sources */,
 				284CFB2226651BBB00DB9879 /* SignUpViewModel.swift in Sources */,
 				284CFB3126652BB700DB9879 /* CheckEmailUseCase.swift in Sources */,
-				280BE9382668B0C90071183E /* CancelReservationUseCase.swift in Sources */,
+				2830F20E2690776900307713 /* FetchReservationInfoDTO.swift in Sources */,
+				286734682691716E00878CEA /* ReservationHistoryTableViewCell.swift in Sources */,
+				2830F21826909CBB00307713 /* AcceptReservationUseCase.swift in Sources */,
 				287CB910266E574F00B51F0D /* DashboardInfoViewModel.swift in Sources */,
-				280BE92F2668B0C90071183E /* FetchReservationsUseCaseMock.swift in Sources */,
+				2867346C2691951E00878CEA /* UserInfoDTO.swift in Sources */,
 				2866E06B2663C5F50046C8CE /* ViewController.swift in Sources */,
 				2830F2082690617300307713 /* Encodable+Extension.swift in Sources */,
 				2830F2022690602500307713 /* SignUpDTO.swift in Sources */,
+				2830F21A26909CE900307713 /* AcceptReservationDTO.swift in Sources */,
+				2867345A269153FC00878CEA /* ReservationListViewModel.swift in Sources */,
 				284CFB2026651BBB00DB9879 /* SignUpViewController.swift in Sources */,
+				2830F21E2690A1BC00307713 /* EmergencyDashboardCollectionViewCell.swift in Sources */,
 				284CFB2D26651C0100DB9879 /* UIView+Extension.swift in Sources */,
 				280BE8F826675D6F0071183E /* UIButton+Extension.swift in Sources */,
 				284CFB1A26651BBB00DB9879 /* SendEmailViewController.swift in Sources */,
 				280BE9232668B08B0071183E /* ReservationModel.swift in Sources */,
 				2866E0672663C5F50046C8CE /* AppDelegate.swift in Sources */,
 				284CFB1E26651BBB00DB9879 /* LoginViewController.swift in Sources */,
+				2867346E2691959A00878CEA /* SignearAPI+MyPage.swift in Sources */,
 				284CFB2326651BBB00DB9879 /* HelloViewModel.swift in Sources */,
 				284CFB2426651BBB00DB9879 /* EmailCheckViewController.swift in Sources */,
 				280BE9462668B1570071183E /* MyPageTableViewCell.swift in Sources */,

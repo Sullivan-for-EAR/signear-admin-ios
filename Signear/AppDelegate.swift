@@ -54,17 +54,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func switchRootViewToReservationListView() {
         let mainTabBarController = MainTabBarController()
+        let navigationController = UINavigationController(rootViewController: mainTabBarController)
+        navigationController.isNavigationBarHidden = true
         if #available(iOS 13.0, *) {
             if let scene = UIApplication.shared.connectedScenes.first,
                let windowScene = (scene as? UIWindowScene) {
                 let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
                 window.windowScene = windowScene
-                window.rootViewController = mainTabBarController
+                window.rootViewController = navigationController
                 window.makeKeyAndVisible()
                 self.window = window
             }
         } else {
-            window?.rootViewController = mainTabBarController
+            window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
         }
     }

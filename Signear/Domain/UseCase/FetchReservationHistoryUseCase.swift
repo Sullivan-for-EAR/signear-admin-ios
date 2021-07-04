@@ -9,13 +9,21 @@ import Foundation
 import RxSwift
 
 protocol FetchReservationHistoryUseCaseType {
-    func fetchReservationHistory() -> Observable<[ReservationHistoryModel]>
+    func fetchReservationHistory() -> Observable<Result<[ReservationHistoryModel], APIError>>
 }
 
 class FetchReservationHistoryUseCase: FetchReservationHistoryUseCaseType {
     
-    func fetchReservationHistory() -> Observable<[ReservationHistoryModel]> {
+    func fetchReservationHistory() -> Observable<Result<[ReservationHistoryModel], APIError>> {
         // TODO : API 적용
-        return .just([])
+        return SignearAPI.shared.fetchReservationHistory()
+            .map { result in
+                switch result {
+                case .success(let history):
+                    return .success(history.map { $0.toDomain() } )
+                case .failure(let error):
+                    return .failure(error)
+                }
+            }
     }
 }

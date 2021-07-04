@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var backImageView: UIImageView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet private weak var nextButton: UIButton!
+    @IBOutlet private weak var loginButton: UIButton!
     @IBOutlet private weak var findAccountLabel: UILabel!
     
     // MARK: - Properties - Internal
@@ -41,6 +41,7 @@ class LoginViewController: UIViewController {
         
         #if DEBUG
         passwordTextField.text = "123123"
+        loginButton.isEnabled = true
         #endif
     }
     
@@ -62,7 +63,17 @@ extension LoginViewController {
     private func configureUI() {
         emailTextField.text = email
         configuareBackgroundLayer()
-        nextButton.rx.tap
+        configureBackImageView()
+        
+        Observable.of(emailTextField.rx.text.orEmpty, passwordTextField.rx.text.orEmpty).merge()
+            .asDriver(onErrorJustReturn: "")
+            .drive(onNext: { [weak self] text in
+                self?.updateUI()
+            }).disposed(by: disposeBag)
+        
+        loginButton.setBackgroundColor(.init(rgb: 0x222222), for: .normal)
+        loginButton.setBackgroundColor(.init(rgb: 0xB6B6B6), for: .disabled)
+        loginButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
                 guard let self = self,
@@ -72,6 +83,15 @@ extension LoginViewController {
                 }
                 self.viewModel?.inputs.login(email: email, password: password)
             }).disposed(by: disposeBag)
+        
+    
+        let tapGenture = UITapGestureRecognizer(target: self, action: nil)
+        tapGenture.rx.event
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                self?.showFindPasswordViewController()
+            }).disposed(by: disposeBag)
+        findAccountLabel.addGestureRecognizer(tapGenture)
     }
     
     private func configuareBackgroundLayer() {
@@ -82,12 +102,29 @@ extension LoginViewController {
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
+    private func configureBackImageView() {
+        let backGenture = UITapGestureRecognizer(target: self, action: nil)
+        backGenture.rx.event
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: false)
+            }).disposed(by: disposeBag)
+        backImageView.addGestureRecognizer(backGenture)
+    }
+    
     private func bindUI() {
         viewModel?.outputs.loginResult
             .filter { $0 }
             .drive(onNext: { [weak self] result in
                 self?.showReservationListView()
             }).disposed(by: disposeBag)
+    }
+    
+    private func updateUI() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.loginButton.isEnabled = self.emailTextField.text?.isValidEmail() == true && self.passwordTextField.text?.isNotEmpty == true
+        }
     }
     
     private func showReservationListView() {
@@ -98,5 +135,13 @@ extension LoginViewController {
     private func showFindAccountView() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "FindAccountViewController") as? FindAccountViewController else { return }
         navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    private func showFindPasswordViewController() {
+        let alert = UIAlertController(title: nil,
+                                      message: "현재 개발 중입니다.\n곧 이어 드릴게요 :-)",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
 }

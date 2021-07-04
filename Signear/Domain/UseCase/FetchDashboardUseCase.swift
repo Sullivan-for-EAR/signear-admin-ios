@@ -9,12 +9,19 @@ import Foundation
 import RxSwift
 
 protocol FetchDashboardUseCaseType {
-    func execute() -> Observable<[ReservationModel]>
+    func fetchDashboard() -> Observable<Result<[ReservationModel], APIError>>
 }
 
 class FetchDashboardUseCase: FetchDashboardUseCaseType {
-    
-    func execute() -> Observable<[ReservationModel]> {
-        return .just([])
+    func fetchDashboard() -> Observable<Result<[ReservationModel], APIError>> {
+        return SignearAPI.shared.fetchDashboard()
+            .map { response in
+                switch response {
+                case .success(let list):
+                    return .success(list.map { $0.toDomain() })
+                case .failure(let error):
+                    return .failure(error)
+                }
+            }
     }
 }

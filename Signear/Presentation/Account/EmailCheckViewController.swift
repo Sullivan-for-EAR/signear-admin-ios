@@ -36,6 +36,7 @@ class EmailCheckViewController: UIViewController {
         
         #if DEBUG
         emailTextField.text = "test@ab.cd"
+        nextButton.isEnabled = true
         #endif
     }
     
@@ -56,7 +57,16 @@ extension EmailCheckViewController {
     
     private func configuareUI() {
         configuareBackgroundLayer()
+        configureBackImageView()
         
+        emailTextField.rx.text.orEmpty
+            .asDriver()
+            .drive(onNext: { [weak self] text in
+                self?.nextButton.isEnabled = text.isValidEmail()
+            }).disposed(by: disposeBag)
+        
+        nextButton.setBackgroundColor(.init(rgb: 0x222222), for: .normal)
+        nextButton.setBackgroundColor(.init(rgb: 0xB6B6B6), for: .disabled)
         nextButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
@@ -66,6 +76,14 @@ extension EmailCheckViewController {
                 }
                 self.viewModel?.inputs.checkEmail(email)
             }).disposed(by: disposeBag)
+        
+        let tapGenture = UITapGestureRecognizer(target: self, action: nil)
+        tapGenture.rx.event
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                self?.showFindPasswordViewController()
+            }).disposed(by: disposeBag)
+        findAccountLabel.addGestureRecognizer(tapGenture)
     }
     
     private func configuareBackgroundLayer() {
@@ -74,6 +92,16 @@ extension EmailCheckViewController {
         gradientLayer.colors = [UIColor.init(r: 10, g: 132, b: 255).cgColor,
                                 UIColor.init(r: 0, g: 178, b: 255).cgColor]
         self.view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    private func configureBackImageView() {
+        let backGenture = UITapGestureRecognizer(target: self, action: nil)
+        backGenture.rx.event
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: false)
+            }).disposed(by: disposeBag)
+        backImageView.addGestureRecognizer(backGenture)
     }
     
     private func bindUI() {
@@ -90,12 +118,20 @@ extension EmailCheckViewController {
     private func showLoginViewController() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         vc.email = emailTextField.text
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: false)
     }
     
     private func showSignUpViewController() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else { return }
         vc.email = emailTextField.text
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    private func showFindPasswordViewController() {
+        let alert = UIAlertController(title: nil,
+                                      message: "현재 개발 중입니다.\n곧 이어 드릴게요 :-)",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
 }

@@ -6,11 +6,18 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class HelloViewController: UIViewController {
     
+    // MARK : Properties - UI
+    
+    @IBOutlet private weak var startButton: UIButton!
+    
     // MARK : Properties - Private
     
+    private let disposeBag = DisposeBag()
     private var viewModel: HelloViewModelType? {
         didSet {
             bindUI()
@@ -20,7 +27,13 @@ class HelloViewController: UIViewController {
     // MARK : Life Cycle
     
     override func viewDidLoad() {
-        initUI()
+        super.viewDidLoad()
+        configureUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel = HelloViewModel()
     }
 }
 
@@ -28,11 +41,16 @@ class HelloViewController: UIViewController {
 
 extension HelloViewController {
     
-    private func initUI() {
-        initBackgroundColor()
+    private func configureUI() {
+        configureBackgroundColor()
+        startButton.rx.tap
+            .asDriver()
+            .drive(onNext: { [weak self] in
+                self?.showReservationListView()
+            }).disposed(by: disposeBag)
     }
     
-    private func initBackgroundColor() {
+    private func configureBackgroundColor() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = [UIColor.init(r: 10, g: 132, b: 255).cgColor,
@@ -41,6 +59,10 @@ extension HelloViewController {
     }
     
     private func bindUI() {
-        
+    }
+    
+    private func showReservationListView() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.switchRootViewToReservationListView()
     }
 }

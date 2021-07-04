@@ -62,7 +62,9 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="KhU-Iq-bDq"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="상세 보기">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="5"/>
@@ -119,8 +121,8 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <size key="customSize" width="285" height="257"/>
             <connections>
+                <outlet property="addressLabel" destination="Rvf-9i-uox" id="Ozc-nO-v2v"/>
                 <outlet property="dateLabel" destination="1ru-Rj-suv" id="thC-yU-xtl"/>
-                <outlet property="locationLabel" destination="Rvf-9i-uox" id="Ozc-nO-v2v"/>
                 <outlet property="moreButton" destination="Ium-YI-52T" id="TvT-V4-Izl"/>
                 <outlet property="timeLabel" destination="fVy-wm-hVO" id="nT5-m8-aCW"/>
                 <outlet property="typeLabel" destination="wNk-TQ-Ccl" id="bSq-mX-T13"/>

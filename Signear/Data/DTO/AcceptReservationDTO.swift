@@ -1,0 +1,22 @@
+//
+//  AcceptReservationDTO.swift
+//  Signear
+//
+//  Created by 신정섭 on 2021/07/03.
+//
+
+import Foundation
+
+enum AcceptReservationDTO {
+    struct Request: Encodable {
+        let signId: String
+        
+        private enum CodingKeys: String, CodingKey {
+            case signId = "sign_id"
+        }
+    }
+    
+    struct Response: Decodable {
+        let rsID: Int
+    }
+}

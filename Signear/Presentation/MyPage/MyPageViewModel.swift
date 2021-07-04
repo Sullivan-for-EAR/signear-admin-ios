@@ -47,9 +47,15 @@ extension MyPageViewModel: MyPageViewModelInputs {
     
     func fetchProfile() {
         useCase.fetchProfile()
-            .catchAndReturn(.init())
-            .bind(to: _profile)
-            .disposed(by: disposeBag)
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(let profile):
+                    self?._profile.accept(profile)
+                case .failure(_):
+                    // TODO : API Error
+                    break
+                }
+            }).disposed(by: disposeBag)
     }
 }
 
