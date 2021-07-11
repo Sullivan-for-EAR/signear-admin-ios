@@ -142,7 +142,7 @@ extension DashboardInfoViewController {
         dateFormatter.dateFormat = "HHmm"
         let startDate = dateFormatter.date(from: startTime) ?? Date()
         let endDate = dateFormatter.date(from: endTime) ?? Date()
-        dateFormatter.dateFormat = "a H시 mm분"
+        dateFormatter.dateFormat = "a h시 mm분"
         timeLabel.text = "\(dateFormatter.string(from: startDate)) ~ \(dateFormatter.string(from: endDate))"
     }
     

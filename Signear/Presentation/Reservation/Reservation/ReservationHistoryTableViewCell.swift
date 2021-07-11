@@ -30,7 +30,7 @@ extension ReservationHistoryTableViewCell {
         var date = convertDateToString(date: history.date)
         if let startTime = history.startTime {
             date.append(" ")
-            date.append(convertTimeStringToDate(time: startTime).convertStringByFormat(format: "a H시 mm분"))
+            date.append(convertTimeStringToDate(time: startTime).convertStringByFormat(format: "a h시 mm분"))
         }
         dateLabel.text = date
         addressLabel.text = history.address

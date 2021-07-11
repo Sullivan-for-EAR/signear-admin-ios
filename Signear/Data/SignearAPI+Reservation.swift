@@ -22,6 +22,7 @@ extension SignearAPI {
             let request =
                 AF.request(url,
                            method: .get,
+                           parameters: FetchDashboardDTO.Request(signId: "\(signId)").toDictionary,
                            encoding: URLEncoding.queryString,
                            headers: .init(token: token))
                 .responseString { response in

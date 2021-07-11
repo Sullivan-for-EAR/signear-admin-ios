@@ -116,6 +116,9 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gUP-02-Nmq">
+                                        <rect key="frame" x="32" y="111.5" width="22" height="24"/>
+                                    </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7w-DR-5m7">
                                         <rect key="frame" x="68" y="104.5" width="319" height="38"/>
                                         <constraints>
@@ -161,7 +164,9 @@
                                     <constraint firstItem="lvf-9O-dck" firstAttribute="leading" secondItem="DO6-ZA-Mhb" secondAttribute="leading" constant="22" id="X79-3k-IAk"/>
                                     <constraint firstItem="6xV-Q5-RVH" firstAttribute="top" secondItem="DO6-ZA-Mhb" secondAttribute="top" constant="29" id="Yw8-Pl-70f"/>
                                     <constraint firstItem="lvf-9O-dck" firstAttribute="trailing" secondItem="DO6-ZA-Mhb" secondAttribute="trailing" constant="-22" id="ZbJ-hB-1TR"/>
+                                    <constraint firstItem="gUP-02-Nmq" firstAttribute="trailing" secondItem="k7w-DR-5m7" secondAttribute="leading" constant="-14" id="cps-OL-3jL"/>
                                     <constraint firstItem="k7w-DR-5m7" firstAttribute="top" secondItem="6xV-Q5-RVH" secondAttribute="bottom" constant="49" id="g2f-fd-If2"/>
+                                    <constraint firstItem="gUP-02-Nmq" firstAttribute="centerY" secondItem="k7w-DR-5m7" secondAttribute="centerY" id="jqV-cC-J6g"/>
                                     <constraint firstItem="k7w-DR-5m7" firstAttribute="bottom" secondItem="lvf-9O-dck" secondAttribute="top" constant="-30" id="rk3-86-aEa"/>
                                     <constraint firstItem="k7w-DR-5m7" firstAttribute="leading" secondItem="DO6-ZA-Mhb" secondAttribute="leading" constant="68" id="w3x-85-xOO"/>
                                     <constraint firstItem="lvf-9O-dck" firstAttribute="bottom" secondItem="GB9-yg-mWW" secondAttribute="top" constant="-13" id="xXq-eu-Rvk"/>
@@ -310,6 +315,9 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-ER-rKI">
+                                        <rect key="frame" x="32" y="98.5" width="22" height="24"/>
+                                    </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuU-in-Bh6">
                                         <rect key="frame" x="68" y="91.5" width="319" height="38"/>
                                         <constraints>
@@ -318,6 +326,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passwordIcon" translatesAutoresizingMaskIntoConstraints="NO" id="17g-JC-ZjV">
+                                        <rect key="frame" x="34" y="159.5" width="20" height="26"/>
+                                    </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTg-hr-uud">
                                         <rect key="frame" x="68" y="153.5" width="319" height="38"/>
                                         <constraints>
@@ -355,6 +366,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="uuU-in-Bh6" firstAttribute="bottom" secondItem="GTg-hr-uud" secondAttribute="top" constant="-24" id="04e-c6-yX9"/>
+                                    <constraint firstItem="17g-JC-ZjV" firstAttribute="trailing" secondItem="GTg-hr-uud" secondAttribute="leading" constant="-14" id="58q-Ky-PyT"/>
                                     <constraint firstItem="2CR-RQ-65e" firstAttribute="leading" secondItem="tbA-IB-Pf3" secondAttribute="leading" constant="22" id="76S-0k-lRz"/>
                                     <constraint firstItem="GTg-hr-uud" firstAttribute="leading" secondItem="tbA-IB-Pf3" secondAttribute="leading" constant="68" id="7Un-zK-igM"/>
                                     <constraint firstItem="uuU-in-Bh6" firstAttribute="top" secondItem="Z0P-SZ-WHY" secondAttribute="bottom" constant="36" id="9HP-MB-ump"/>
@@ -363,13 +375,16 @@
                                     <constraint firstItem="uuU-in-Bh6" firstAttribute="leading" secondItem="tbA-IB-Pf3" secondAttribute="leading" constant="68" id="MYF-JW-S3n"/>
                                     <constraint firstItem="dGF-E7-MBS" firstAttribute="leading" secondItem="tbA-IB-Pf3" secondAttribute="leading" constant="16" id="O8a-vc-q6C"/>
                                     <constraint firstItem="Z0P-SZ-WHY" firstAttribute="centerX" secondItem="tbA-IB-Pf3" secondAttribute="centerX" id="aO0-kG-ZM6"/>
+                                    <constraint firstItem="17g-JC-ZjV" firstAttribute="centerY" secondItem="GTg-hr-uud" secondAttribute="centerY" id="cHG-6V-QCS"/>
                                     <constraint firstItem="GTg-hr-uud" firstAttribute="bottom" secondItem="2CR-RQ-65e" secondAttribute="top" constant="-30" id="dKZ-1T-HuT"/>
                                     <constraint firstItem="2CR-RQ-65e" firstAttribute="trailing" secondItem="tbA-IB-Pf3" secondAttribute="trailing" constant="-22" id="dle-Cy-ogC"/>
                                     <constraint firstItem="2CR-RQ-65e" firstAttribute="bottom" secondItem="Kaq-Ob-gyV" secondAttribute="top" constant="-13" id="j0K-Mo-PyN"/>
+                                    <constraint firstItem="hXu-ER-rKI" firstAttribute="centerY" secondItem="uuU-in-Bh6" secondAttribute="centerY" id="lxB-VH-JKh"/>
                                     <constraint firstItem="uuU-in-Bh6" firstAttribute="trailing" secondItem="tbA-IB-Pf3" secondAttribute="trailing" constant="-27" id="mYw-iW-PT3"/>
                                     <constraint firstItem="dGF-E7-MBS" firstAttribute="top" secondItem="tbA-IB-Pf3" secondAttribute="top" constant="32" id="rM5-Fd-QTa"/>
                                     <constraint firstItem="Kaq-Ob-gyV" firstAttribute="centerX" secondItem="tbA-IB-Pf3" secondAttribute="centerX" id="rOO-tJ-uGc"/>
                                     <constraint firstAttribute="trailing" secondItem="GTg-hr-uud" secondAttribute="trailing" constant="27" id="wzn-Ch-nfl"/>
+                                    <constraint firstItem="hXu-ER-rKI" firstAttribute="trailing" secondItem="uuU-in-Bh6" secondAttribute="leading" constant="-14" id="zZ9-4x-Nj0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -421,6 +436,9 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3ny-14-Da1">
+                                        <rect key="frame" x="32" y="106.5" width="22" height="24"/>
+                                    </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ixa-BF-xaT">
                                         <rect key="frame" x="68" y="99.5" width="322" height="38"/>
                                         <constraints>
@@ -429,6 +447,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passwordIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mTl-kB-aVx">
+                                        <rect key="frame" x="34" y="167.5" width="20" height="26"/>
+                                    </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aHM-Lx-JtT">
                                         <rect key="frame" x="68" y="161.5" width="319" height="38"/>
                                         <constraints>
@@ -437,6 +458,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kTA-67-pJh">
+                                        <rect key="frame" x="30" y="231" width="24" height="23"/>
+                                    </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="소속 지역을 선택하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-Bo-xJg">
                                         <rect key="frame" x="68" y="223.5" width="319" height="38"/>
                                         <constraints>
@@ -477,17 +501,23 @@
                                     <constraint firstItem="aHM-Lx-JtT" firstAttribute="leading" secondItem="Hmu-CP-h5c" secondAttribute="leading" constant="68" id="4tr-we-u4N"/>
                                     <constraint firstAttribute="bottom" secondItem="w6K-6D-PGa" secondAttribute="bottom" constant="51" id="5bP-2k-epW"/>
                                     <constraint firstItem="Ixa-BF-xaT" firstAttribute="leading" secondItem="Hmu-CP-h5c" secondAttribute="leading" constant="68" id="6dR-dF-apw"/>
+                                    <constraint firstItem="kTA-67-pJh" firstAttribute="centerY" secondItem="CFu-Bo-xJg" secondAttribute="centerY" id="AdY-yV-UUa"/>
                                     <constraint firstItem="Ixa-BF-xaT" firstAttribute="top" secondItem="VSl-nn-5d8" secondAttribute="bottom" constant="44" id="Afk-7t-Tva"/>
+                                    <constraint firstItem="3ny-14-Da1" firstAttribute="trailing" secondItem="Ixa-BF-xaT" secondAttribute="leading" constant="-14" id="Apo-o2-GjP"/>
                                     <constraint firstItem="VSl-nn-5d8" firstAttribute="centerX" secondItem="Hmu-CP-h5c" secondAttribute="centerX" id="BAU-6j-TWq"/>
+                                    <constraint firstItem="kTA-67-pJh" firstAttribute="trailing" secondItem="CFu-Bo-xJg" secondAttribute="leading" constant="-14" id="Hal-Vq-nkv"/>
                                     <constraint firstItem="CFu-Bo-xJg" firstAttribute="leading" secondItem="Hmu-CP-h5c" secondAttribute="leading" constant="68" id="HnX-Ti-Tmk"/>
                                     <constraint firstAttribute="trailing" secondItem="CFu-Bo-xJg" secondAttribute="trailing" constant="27" id="JI2-pe-obK"/>
                                     <constraint firstItem="Ixa-BF-xaT" firstAttribute="bottom" secondItem="aHM-Lx-JtT" secondAttribute="top" constant="-24" id="Rhc-c6-4PT"/>
                                     <constraint firstItem="aHM-Lx-JtT" firstAttribute="bottom" secondItem="CFu-Bo-xJg" secondAttribute="top" constant="-24" id="Smi-Jf-Ea5"/>
+                                    <constraint firstItem="3ny-14-Da1" firstAttribute="centerY" secondItem="Ixa-BF-xaT" secondAttribute="centerY" id="TLi-dm-bjn"/>
                                     <constraint firstItem="dRD-Sz-6eK" firstAttribute="top" secondItem="Hmu-CP-h5c" secondAttribute="top" constant="32" id="ZW2-oz-D6P"/>
                                     <constraint firstItem="VSl-nn-5d8" firstAttribute="top" secondItem="Hmu-CP-h5c" secondAttribute="top" constant="29" id="amY-I7-qtm"/>
                                     <constraint firstItem="w6K-6D-PGa" firstAttribute="trailing" secondItem="Hmu-CP-h5c" secondAttribute="trailing" constant="-22" id="bR5-WS-aee"/>
+                                    <constraint firstItem="mTl-kB-aVx" firstAttribute="centerY" secondItem="aHM-Lx-JtT" secondAttribute="centerY" id="dFh-2t-zBC"/>
                                     <constraint firstAttribute="trailing" secondItem="Ixa-BF-xaT" secondAttribute="trailing" constant="24" id="elb-7V-AMf"/>
                                     <constraint firstItem="CQe-7t-AKC" firstAttribute="bottom" secondItem="w6K-6D-PGa" secondAttribute="top" constant="-14" id="kBT-uG-Eru"/>
+                                    <constraint firstItem="mTl-kB-aVx" firstAttribute="trailing" secondItem="aHM-Lx-JtT" secondAttribute="leading" constant="-14" id="oBw-ip-jrD"/>
                                     <constraint firstItem="w6K-6D-PGa" firstAttribute="leading" secondItem="Hmu-CP-h5c" secondAttribute="leading" constant="22" id="pxU-Pi-LC9"/>
                                     <constraint firstItem="CQe-7t-AKC" firstAttribute="centerX" secondItem="Hmu-CP-h5c" secondAttribute="centerX" id="qbf-UZ-luN"/>
                                     <constraint firstItem="CFu-Bo-xJg" firstAttribute="bottom" secondItem="CQe-7t-AKC" secondAttribute="top" constant="-42" id="wCW-FY-CYR"/>
@@ -710,8 +740,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="emailIcon" width="22" height="24"/>
         <image name="helloIcon" width="70" height="55"/>
         <image name="leftArrowIcon" width="20.5" height="20"/>
+        <image name="passwordIcon" width="20" height="26"/>
+        <image name="placeIcon" width="24" height="23"/>
         <image name="smallLogo" width="43" height="53"/>
         <image name="voyageIcon" width="93.5" height="49"/>
         <systemColor name="systemBackgroundColor">

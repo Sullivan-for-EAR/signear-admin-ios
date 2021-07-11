@@ -10,10 +10,10 @@ import Foundation
 enum FetchDashboardDTO {
     
     struct Request: Codable {
-        let reservationId: Int
+        let signId: String
         
         enum CodingKeys: String, CodingKey {
-            case reservationId = "reservation_id"
+            case signId = "sign_id"
         }
     }
     

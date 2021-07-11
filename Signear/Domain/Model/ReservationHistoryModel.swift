@@ -68,6 +68,8 @@ extension ReservationHistoryModel.Status {
             return UIImage.init(named: "confirmReservationIcon")
         case .reject:
             return UIImage.init(named: "rejectReservationIcon")
+        case .complete:
+            return UIImage.init(named: "translateFinishIcon")
         default:
             return nil
         }
