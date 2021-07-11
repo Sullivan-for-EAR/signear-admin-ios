@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 import RxCocoa
 import RxSwift
 
@@ -67,7 +68,18 @@ extension MyPageViewController {
     }
     
     private func showCommentPage() {
-        // TODO
+        if MFMailComposeViewController.canSendMail() {
+            let compseVC = MFMailComposeViewController()
+            compseVC.mailComposeDelegate = self
+            
+            compseVC.setToRecipients(["sullivan_developer@signear.com"])
+            compseVC.setSubject("의견 보내기")
+            
+            self.present(compseVC, animated: true, completion: nil)
+        }
+        else {
+            self.showSendMailErrorAlert()
+        }
     }
     
     private func showLogoutAlertView() {
@@ -84,6 +96,13 @@ extension MyPageViewController {
     private func logout() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.switchRootViewToInitialView()
+    }
+    
+    private func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertController(title: "메일을 전송 실패", message: "아이폰 이메일 설정을 확인하고 다시 시도해주세요.", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "확인", style: .default)
+        sendMailErrorAlert.addAction(confirmAction)
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
     }
 }
 
@@ -120,5 +139,10 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
     }
-    
+}
+
+extension MyPageViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
 }

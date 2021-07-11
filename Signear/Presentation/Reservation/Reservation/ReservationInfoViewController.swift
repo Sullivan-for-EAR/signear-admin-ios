@@ -32,6 +32,7 @@ class ReservationInfoViewController: UIViewController {
     
     // MARK: - Properties - Private
     
+    private var phone: String?
     private let disposeBag = DisposeBag()
     private var viewModel: ReservationInfoViewModelType? {
         didSet {
@@ -96,6 +97,7 @@ extension ReservationInfoViewController {
                 self.addressLabel.text = reservationInfo.address
                 self.methodLabel.text = reservationInfo.method == .video ? "화상통역(비대면)" : "수어통역(대면)"
                 self.requestLabel.text = reservationInfo.request
+                self.phone = reservationInfo.phone
             }).disposed(by: disposeBag)
     }
     
@@ -124,6 +126,13 @@ extension ReservationInfoViewController {
     }
     
     private func call() {
+        guard let phone = phone else {
+            return
+        }
         
+        if let url = NSURL(string: "tel://" + phone.getArrayAfterRegex(regex: "[0-9]").joined()),
+           UIApplication.shared.canOpenURL(url as URL) {
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        }
     }
 }

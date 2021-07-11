@@ -19,6 +19,7 @@ struct ReservationInfoModel: Equatable {
     let type: CallType
     let request: String?
     let reject: String?
+    let phone: String
 }
 
 extension ReservationInfoModel {

@@ -29,6 +29,11 @@ enum FetchReservationInfoDTO {
         let type: Int
         let request: String?
         let reject: String?
+        let customerUser: CustomerUserData
+        
+        struct CustomerUserData: Decodable {
+            let phone: String
+        }
         
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -43,6 +48,7 @@ enum FetchReservationInfoDTO {
             self.type = try container.decode(Int.self, forKey: .type)
             self.request = try? container.decode(String.self, forKey: .request)
             self.reject = try? container.decode(String.self, forKey: .reject)
+            self.customerUser = try container.decode(CustomerUserData.self, forKey: .customerUser)
         }
         
         private enum CodingKeys: String, CodingKey {
@@ -57,6 +63,7 @@ enum FetchReservationInfoDTO {
             case type
             case request
             case reject
+            case customerUser
         }
     }
 }
@@ -87,7 +94,8 @@ extension FetchReservationInfoDTO.Response {
                      status: .init(rawValue: status) ?? ReservationInfoModel.Status.error,
                      type: .init(rawValue: type) ?? ReservationInfoModel.CallType.error,
                      request: request,
-                     reject: reject)
+                     reject: reject,
+                     phone: customerUser.phone)
     }
     
     func toDomain() -> ReservationHistoryModel {

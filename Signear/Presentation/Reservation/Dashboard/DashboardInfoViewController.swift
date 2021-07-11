@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 import RxCocoa
 import RxSwift
 
@@ -34,6 +35,7 @@ class DashboardInfoViewController: UIViewController {
             bindUI()
         }
     }
+    private var phone: String?
     
     // MARK: - Life Cycle
     
@@ -108,6 +110,7 @@ extension DashboardInfoViewController {
                 self.addressLabel.text = reservationInfo.address
                 self.setMethod(method: reservationInfo.method)
                 self.requestLabel.text = reservationInfo.request
+                self.phone = reservationInfo.phone
             }).disposed(by: disposeBag)
         
         viewModel?.outputs.acceptResult
@@ -162,10 +165,13 @@ extension DashboardInfoViewController {
                                       message: nil,
                                       preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "음성전화 걸기", style: .default, handler: { [weak self] _ in
+            self?.call()
         }))
         alert.addAction(UIAlertAction(title: "영상전화 걸기", style: .default, handler: { [weak self] _ in
+            self?.videoCall()
         }))
         alert.addAction(UIAlertAction(title: "문자 보내기", style: .default, handler: { [weak self] _ in
+            self?.sendMessage()
         }))
         alert.addAction(UIAlertAction(title: "취소", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -200,5 +206,42 @@ extension DashboardInfoViewController {
         }))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    private func call() {
+        guard let phone = phone else {
+            return
+        }
+        
+        if let url = NSURL(string: "tel://" + phone.getArrayAfterRegex(regex: "[0-9]").joined()),
+           UIApplication.shared.canOpenURL(url as URL) {
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    private func videoCall() {
+        let alert = UIAlertController(title: nil,
+                                      message: "현재 개발 중입니다.\n곧 이어 드릴게요 :-)",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func sendMessage() {
+        guard let phone = phone else {
+            return
+        }
+        
+        let messageComposer = MFMessageComposeViewController()
+        messageComposer.messageComposeDelegate = self
+        if MFMessageComposeViewController.canSendText(){
+            messageComposer.recipients = [phone.getArrayAfterRegex(regex: "[0-9]").joined()]
+            self.present(messageComposer, animated: true, completion: nil)
+        }
+    }
 }
 
+extension DashboardInfoViewController: MFMessageComposeViewControllerDelegate {
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+}
